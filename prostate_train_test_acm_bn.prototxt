@@ -413,11 +413,21 @@ layer {
     }
   }
 }
+layer {
+  name: "concat"
+  type: "Concat"
+  bottom: "conv2b"
+  bottom: "dataPreCT"
+  top: "conv2bnew"
+  concat_param {
+  concat_dim:1
+  }
+}
 ## BN
 layer {
   name: "bn2b"
   type: "BatchNorm"
-  bottom: "conv2b"
+  bottom: "conv2bnew"
   top: "conv2b_bn"
   param {
     lr_mult: 0
