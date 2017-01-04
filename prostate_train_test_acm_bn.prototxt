@@ -413,21 +413,11 @@ layer {
     }
   }
 }
-layer {
-  name: "concat"
-  type: "Concat"
-  bottom: "conv2b"
-  bottom: "dataPreCT"
-  top: "conv2bnew"
-  concat_param {
-  concat_dim:1
-  }
-}
 ## BN
 layer {
   name: "bn2b"
   type: "BatchNorm"
-  bottom: "conv2bnew"
+  bottom: "conv2b"
   top: "conv2b_bn"
   param {
     lr_mult: 0
@@ -522,10 +512,26 @@ layer {
     }
   }
 }
+## BN
+layer {
+  name: "bn3a"
+  type: "BatchNorm"
+  bottom: "conv3a"
+  top: "conv3a_bn"
+  param {
+    lr_mult: 0
+  }
+  param {
+    lr_mult: 0
+  }
+  param {
+    lr_mult: 0
+  }
+}
 layer {
   name: "loss"
   type: "EuclideanLoss"
-  bottom: "conv3a"
+  bottom: "conv3a_bn"
   bottom: "dataCT"
   top: "loss"
 #  loss_param {
@@ -539,7 +545,7 @@ layer {
 layer {
   name: "loss"
   type: "EuclideanLoss"
-  bottom: "conv3a"
+  bottom: "conv3a_bn"
   bottom: "dataCT"
   top: "loss"
 #  loss_param {
