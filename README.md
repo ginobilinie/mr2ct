@@ -9,5 +9,5 @@ If you find it is helpful for your work, please cite:
 
 "Nie, Dong, et al. "Estimating CT Image from MRI Data Using 3D Fully Convolutional Networks." International Workshop on Large-Scale Annotation of Biomedical Data and Expert Label Synthesis. Springer International Publishing, 2016."
 
-Actually, I remove the DSN and ACM part, as it is a workshop paper and have paper limitation. But the code/prototxt provided contains the DSN and ACM part.
+Actually, I remove the DSN and ACM part, as it is a workshop paper and have page limitation. But the code/prototxt provided contains the DSN and ACM part.
 
