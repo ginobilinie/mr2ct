@@ -11,3 +11,4 @@ If you find it is helpful for your work, please cite:
 
 Actually, I remove the DSN and ACM part in the workshop paper, as it is a workshop paper and have page limitation. But the code/prototxt provided contains the DSN and ACM part.
 
+This work is different from super-resolution, in which the input and target looks like each other and thus need smaller extent of non-linear mapping. Our work need highly non-linear mapping, thus requires deeper networks. Also, I find another trick during the experiemnts, the input patch size should be larger than the target patch size. 
