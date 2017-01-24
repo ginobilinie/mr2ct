@@ -99,6 +99,6 @@ function cubicCnt=cropCubic(matFA,matSeg,fileID,d,step,rate)
      h5write(sprintf('train32_%d.hdf5',fileID),'/dataCT',trainSeg);
      clear trainFA;
      clear trainSeg;
-     fprintf(fid,sprintf('train32_%d.hdf5\n',fileID));	
+     fprintf(fid,sprintf('/path/to/your/hdf5/train32_%d.hdf5\n',fileID));	
      fclose(fid);
 return
